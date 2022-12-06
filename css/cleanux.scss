@@ -1,0 +1,48 @@
+.cleanux {
+    min-height: 272px;
+    position: relative;
+    padding-top: 66px;
+    padding-bottom: 66px;
+    background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+    overflow: hidden;
+    z-index: 5;
+
+    &__content {
+
+        &__title {
+            color: #ffffff;
+        }
+
+        &__list {
+            margin-top: 34px;
+            display: flex;
+
+            &__col {
+                margin-right: 70px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &__item {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: #FFFFFF;
+
+                    &:first-child {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -5;
+    }
+}

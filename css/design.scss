@@ -1,0 +1,21 @@
+.design {
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+    z-index: 5;
+    overflow: hidden;
+
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -5;
+    }
+}

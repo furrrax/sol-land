@@ -1,0 +1,13 @@
+.preview {
+    position: relative;
+    max-height: fit-content;
+    min-height: 600px;
+    height: 100%;
+    background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+
+    &__img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

@@ -1,0 +1,11 @@
+.slider2 {
+
+    &__button--right {
+        transform: rotate(180deg);
+    }
+
+    & .slider__bg--2 {
+        max-width: 370px;
+        width: 100%;
+    }
+}

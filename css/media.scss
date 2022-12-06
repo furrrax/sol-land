@@ -1,0 +1,48 @@
+// resolutions
+$phones: 400px;
+$midsmart: 768px;
+$smart: 900px;
+$tablets: 1024px;
+$desktop: 1200px;
+
+@mixin desktop {
+	@media screen and (max-width: $desktop) {
+		@content;
+	}
+}
+
+@mixin tablets {
+	@media screen and (max-width: $tablets) {
+		@content;
+	}
+}
+
+@mixin smart {
+	@media screen and (max-width: $smart) {
+		@content;
+	}
+}
+
+@mixin midsmart {
+	@media screen and (max-width: $midsmart) {
+		@content;
+	}
+}
+
+@mixin phones {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}
+
+html {
+	@include desktop {
+		font-size: rem(15px);
+    }
+    @include tablets {
+		font-size: rem(14px);
+    }
+    @include phones {
+		font-size: rem(13px);
+    }
+}

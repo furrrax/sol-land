@@ -1,0 +1,29 @@
+html {
+    font-size: 16px;
+}
+
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@import "normalize.scss";
+@import "fonts.scss";
+@import "media.scss";
+@import "base.scss";
+@import "common.scss";
+@import "start.scss";
+@import "preview.scss";
+@import "text-info.scss";
+@import "increase.scss";
+@import "slider.scss";
+@import "design.scss";
+@import "section-8.scss";
+@import "section-9.scss";
+@import "section-10.scss";
+@import "mobile.scss";
+@import "slider2.scss";
+@import "section-13.scss";
+@import "cleanux.scss";
+@import "order.scss";
+@import "footer.scss";
+@import "mediaqueries.scss";

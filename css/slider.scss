@@ -1,0 +1,71 @@
+.slider {
+    position: relative;
+    height: 804px;
+    background-color: #070B14;
+    z-index: 5;
+    overflow-y: hidden;
+
+    & .container {
+        position: relative;
+        height: 100%;
+    }
+
+    &__wrap {
+        position: relative;
+        padding-left: 75px;
+        padding-right: 75px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+
+    &__buttons {
+        position: absolute;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 10;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+        border-radius: 50%;
+        cursor: pointer;
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        z-index: -5;
+
+        &--1 {
+            left: 0;
+            bottom: 0;
+        }
+
+        &--2 {
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+
+        &__item {
+
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.header {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 72px;
+
+    &__menu {
+        display: flex;
+
+        &__item {
+            margin-right: 52px;
+            /* margin-right: 18.2%; */
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &__link {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                color: #292929;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.start {
+
+    &__company {
+        padding-bottom: 55px;
+
+        &__logo {
+            margin-bottom: 40px;
+        }
+
+        &__desc {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 61px;
+            text-transform: uppercase;
+
+            background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+}
