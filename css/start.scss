@@ -29,6 +29,12 @@
                 font-size: 14px;
                 color: #292929;
                 white-space: nowrap;
+                transition: .6s;
+
+                &:hover {
+                    color: red;
+                    transition: .6s;
+                }
             }
         }
     }

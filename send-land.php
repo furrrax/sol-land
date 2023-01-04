@@ -1,5 +1,6 @@
 <?php
-    $queryUrl = 'https://yourname.bitrix24.ru/rest/1/webhookcode/crm.lead.add.json';
+    //$queryUrl = 'https://yourname.bitrix24.ru/rest/1/webhookcode/crm.lead.add.json';
+    $queryUrl = 'https://itsapsan.bitrix24.ru/rest/12/suvl4x1uz20s2jov/profile.json';
     $queryData = http_build_query(array(
         'fields' => array(
             'TITLE' => 'Заявка с лэндинга',

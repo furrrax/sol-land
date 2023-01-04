@@ -26,7 +26,9 @@
                 border-radius: 10px;
                 padding: 2px;
                 background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%);
+                background-size: 100%;
                 cursor: pointer;
+                transition: all 1s;
 
                 &__inner {
                     display: flex;
@@ -43,10 +45,23 @@
                         font-weight: 500;
                         font-size: 18px;
                         background: linear-gradient(93.58deg, #5D1563 0%, #891465 14.29%, #B11D61 28.57%, #D23357 42.86%, #EC5249 57.14%, #FC7536 71.43%, #FF9A1F 85.71%, #FFC100 100%), linear-gradient(98.42deg, #231557 0%, #5D1563 14.38%, #901565 28.77%, #BD235E 43.15%, #E04250 57.53%, #F8693D 71.91%, #FF9424 86.3%, #FFC100 100.68%);
+                        background-size: 100%;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
                         text-fill-color: transparent;
+                        transition: background-size 1s;
+                    }
+                }
+
+                &:hover {
+                    background-size: 200%;
+                    box-shadow: 0px 5px 20px rgba(9, 9, 9, 0.35);
+                    transition: all 1s;
+
+                    & .section-13__content__left__button__inner__text {
+                        background-size: 200%;
+                        transition: background-size 1s;
                     }
                 }
             }
