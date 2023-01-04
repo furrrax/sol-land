@@ -352,21 +352,21 @@
                             <div class="order__content__form__row">
                                 <div class="order__content__form__col">
                                     <div class="order__content__form__field input-field">
-                                        <input id="firstname" name="name" type="text" class="order__content__form__field__input">
+                                        <input id="firstname" name="name" type="text" class="order__content__form__field__input" maxlength="15" required>
                                         <label for="firstname" class="order__content__form__field__label">FIRST NAME</label>
                                     </div>
                                     <div class="order__content__form__field input-field">
-                                        <input id="lastname" name="lastname" type="text" class="order__content__form__field__input">
+                                        <input id="lastname" name="lastname" type="text" class="order__content__form__field__input" maxlength="20" required>
                                         <label for="lastname" class="order__content__form__field__label">LAST NAME</label>
                                     </div>
                                 </div>
                                 <div class="order__content__form__col">
                                     <div class="order__content__form__field input-field">
-                                        <input id="email" name="email" type="text" class="order__content__form__field__input">
+                                        <input id="email" name="email" type="email" class="order__content__form__field__input" maxlength="30" required>
                                         <label for="email" class="order__content__form__field__label">EMAIL</label>
                                     </div>
                                     <div class="order__content__form__field input-field">
-                                        <input id="company" name="company" type="text" class="order__content__form__field__input">
+                                        <input id="company" name="company" type="text" class="order__content__form__field__input" maxlength="30" required>
                                         <label for="company" class="order__content__form__field__label">COMPANY</label>
                                     </div>
                                 </div>
@@ -374,7 +374,7 @@
                             <div class="order__content__form__row">
                                 <div class="order__content__form__field order__content__form__field--single input-field">
                                     <div class="order__content__form__field__title">DETAILS ABOUT YOUR PROJECT (SERVICES, SCOPE, ETC.)</div>
-                                    <textarea type="text" name="comment" class="order__content__form__field__input materialize-textarea"></textarea>
+                                    <textarea type="text" name="comment" class="order__content__form__field__input materialize-textarea" maxlength="255" required></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="order__content__form__button btn">

@@ -1,18 +1,3 @@
-//SLIDER 1
-
-/* $(document).ready(function() {
-    $('.slider__list-1').owlCarousel({
-        loop:true,
-        autoplay: true,
-        //margin:10,
-        nav:false,
-        items: 1,
-        mouseDrag: true,
-        touchDrag: true,
-        rtl: false,
-    });
-}); */
-
 $(document).ready(function() {
     let slider1 = $('.slider__list-1');
     let slider2 = $('.slider2__list');
@@ -54,6 +39,12 @@ $(document).ready(function() {
 
     $('.slider2__button--right').click(function() {
         slider2.trigger('prev.owl.carousel', [300]);
+    });
+
+    $('#firstname, #lastname').on('input', function() {
+        if (this.value.match(/[^а-яА-Яa-zA-Z]/g)) {
+            this.value = this.value.replace(/[^а-яА-Яa-zA-Z]/g, '');
+        }
     });
 });
 
