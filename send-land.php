@@ -1,17 +1,28 @@
 <?php
-    //$queryUrl = 'https://yourname.bitrix24.ru/rest/1/webhookcode/crm.lead.add.json';
-    $queryUrl = 'https://itsapsan.bitrix24.ru/rest/12/suvl4x1uz20s2jov/profile.json';
+    $name = $_POST['name'];
+    $lastname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $company = $_POST['company'];
+    $comment = $_POST['comment'];
+
+    $queryUrl = 'https://itsapsan.bitrix24.ru/rest/12/64reiv6xaccp6ppn/crm.lead.add.json';
+
     $queryData = http_build_query(array(
         'fields' => array(
-            'TITLE' => 'Заявка с лэндинга',
-            'NAME' => $_POST["name"],
-            'LAST_NAME' => $_POST["lastname"],
-            'EMAIL' => $_POST["email"],
-            'COMPANY_TITLE' => $_POST["company"],
-            'COMMENTS' => $_POST["comment"],
+            'TITLE' => "Лид от ".$company,
+            'NAME' => $name,
+            'LAST_NAME' => $lastname,
+            'EMAIL' => Array(
+                "n0" => Array(
+                    "VALUE" => "$email",
+                    "VALUE_TYPE" => "WORK",
+                ),
+            ),
+            'COMMENTS' => $comment,
         ),
         'params' => array("REGISTER_SONET_EVENT" => "Y")
     )); 
+
     $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_SSL_VERIFYPEER => 0,
@@ -21,6 +32,10 @@
         CURLOPT_URL => $queryUrl,
         CURLOPT_POSTFIELDS => $queryData,
     ));
+
     $result = curl_exec($curl);
     curl_close($curl);
+
+    $result = json_decode($result, 1);
+    if (array_key_exists('error', $result)) echo "ошибка при сохранении лида: ".$result['error_description']."<br/>";
 ?>
